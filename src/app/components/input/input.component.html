@@ -1,0 +1,11 @@
+<div class="centered">
+  <div class="group">
+    <input type="text" id="name" required="required" #nombre maxlength="15" />
+    <label for="name">Nombre</label>
+    <div class="bar"></div>
+  </div>
+  <div class="container-sb">
+    <button (click)="enviar(nombre.value)">Enviar</button>
+    <button (click)="noGracias()">No gracias</button>
+  </div>
+</div>

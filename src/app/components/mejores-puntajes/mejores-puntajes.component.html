@@ -1,0 +1,16 @@
+<h2>Top 10</h2>
+<table *ngIf="users.length>0">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Puntos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.nombre}}</td>
+      <td>{{user.puntaje}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="container-center"><app-spinner *ngIf="users.length<1"></app-spinner></div>

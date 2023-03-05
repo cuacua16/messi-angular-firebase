@@ -1,1 +1,241 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  background-image: url("./assets/images/bombonera/messi-bombonera7.jpg");
+  background-size: cover;
+  background-position: 0 -100px;
+  background-color: rgba($color: #333, $alpha: 0.6);
+  box-shadow: inset 1px 1px 22px gainsboro;
+}
+
+.img {
+  display: block;
+  width: 13vmax;
+  height: 13vmax;
+  border-radius: 50%;
+  background-image: url("./assets/images/control/messi-control-5.jpeg");
+  background-size: cover;
+  background-position: -20px 0;
+  border: gainsboro solid 6px;
+  cursor: pointer;
+  opacity: 1;
+  position: absolute;
+  box-shadow: gainsboro 2px 2px 16px;
+  transition: all 0.3s ease;
+}
+
+.llora {
+  background-image: url("./assets/images/bobo/bobo5.webp");
+  background-size: cover;
+  background-position: 0;
+  width: 100px;
+  height: 100px;
+  filter: grayscale(50%);
+  outline: chartreuse 7px solid;
+  box-shadow: gainsboro 4px 4px 16px;
+}
+p {
+  font-weight: 700;
+  color: rgb(48, 128, 194);
+  text-align: center;
+}
+.gameOver {
+  margin-bottom: 60px;
+  font-size: 32px;
+  color: rgb(208, 73, 49);
+}
+.large {
+  opacity: 1;
+  width: 16vmax;
+  height: 16vmax;
+}
+
+.medium {
+  width: 12vmax;
+  height: 12vmax;
+}
+
+.small {
+  opacity: 0;
+  width: 6vmax;
+  height: 6vmax;
+}
+
+.barra {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: gainsboro;
+  width: 100%;
+  box-shadow: black -4px 4px 22px;
+}
+.cuadro {
+  font-size: 20px;
+  padding: 1px 16px;
+}
+.container-center {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.container-sb {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10px;
+  margin-top: 30px;
+}
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gainsboro;
+  // background-color: rgba(220, 220, 220);
+  background-color: transparent;
+  border: 2px solid gainsboro;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 32px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  box-shadow: 1px 1px gainsboro, 2px 2px gainsboro, 3px 3px gainsboro;
+  transform: translateX(-3px);
+}
+button span {
+  margin-right: 5px;
+}
+
+.velocidad {
+  position: fixed;
+  right: 10px;
+  top: 7px;
+  color: gainsboro;
+}
+
+.containerDialog,
+.containerMejoresPuntajes,
+.containerInicio {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form,
+.mejoresPuntajes {
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(48, 128, 194);
+  box-shadow: gainsboro 1px 1px 8px;
+  color: black;
+  min-width: 300px;
+  width: 80%;
+  max-width: 320px;
+  height: 50%;
+  max-height: 360px;
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#form {
+  align-items: center;
+  max-width: 450px;
+  height: 75%;
+  max-height: 450px;
+}
+.container-sb > button {
+  border: 2px solid rgb(48, 128, 194);
+  color: rgb(48, 128, 194);
+}
+.container-sb > button:hover {
+  box-shadow: 1px 1px rgb(48, 128, 194), 2px 2px rgb(48, 128, 194),
+    3px 3px rgb(48, 128, 194);
+  transform: translateX(-3px);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media screen and (max-width: 940px) {
+  .container::before {
+    content: "";
+    background-position: -120px 0;
+    box-shadow: inset 1px 1px 50px rgba(220, 220, 220, 0.8);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img {
+    border: gainsboro solid 5px;
+  }
+  .llora {
+    outline: chartreuse 3px solid;
+  }
+  p {
+    font-size: 15px;
+    padding: 0;
+  }
+  .cuadro {
+    font-size: 14px;
+    padding: 0 4px;
+  }
+  .velocidad {
+    font-size: 14px;
+  }
+  .top10 {
+    display: none;
+  }
+  .container-sb {
+    // padding: 0px 30px;
+    margin-top: 20px;
+  }
+  button {
+    padding: 0px 4px;
+  }
+  .containerDialog {
+    justify-content: space-evenly;
+  }
+  #form,
+  .mejoresPuntajes {
+    padding: 10px;
+    max-height: 420px;
+  }
+}

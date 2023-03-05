@@ -1,0 +1,19 @@
+* {
+  text-align: center;
+}
+h1 {
+  color: gainsboro;
+  margin-bottom: 50px;
+}
+.buttonContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.containerMejoresPuntajesInicio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

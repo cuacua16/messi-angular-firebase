@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sacaselaal10": {
+      "hosting": {
+        "messi": [
+          "sacaselaal10"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sacaselaal10"
+  }
+}
